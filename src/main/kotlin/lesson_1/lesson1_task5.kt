@@ -1,12 +1,13 @@
 package org.example.lesson_1
 
+const val TOTAL_SECONDS: Short = 6480
+
 fun main() {
-    val totalSeconds: Short = 6480
 
-    val hours: Int = totalSeconds / 3600
-    val minutes: Int = (totalSeconds % 3600) / 60
-    val seconds: Int = totalSeconds % 60
+    val hours: Int = TOTAL_SECONDS / 3600
+    val minutes: Int = (TOTAL_SECONDS % 3600) / 60
+    val seconds: Int = TOTAL_SECONDS % 60
 
-    println("Время проведенное в космосе ${hours}:${minutes}:${seconds}")
-
+    val formattedTime = String.format("%02d:%02d:%02d", hours, minutes, seconds)
+    println("Время проведенное в космосе $formattedTime")
 }
