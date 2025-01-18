@@ -2,8 +2,8 @@ package org.example.lesson_1
 
 fun main() {
     // Константы для перевода времени
-    val secondsInAnHour: Int = 3600
-    val secondsInAMinute: Int = 60
+    val secondsInAnHour: Short = 3600
+    val secondsInAMinute: Short = 60
 
     // Общее количество секунд
     val totalSeconds: Short = 6480
