@@ -1,6 +1,7 @@
 package org.example.lesson_1
 
 fun main() {
+
     // Объявление переменных с явным указанием типа
     val length: Long = 40_868_600_000L
     val age: Byte = 27
