@@ -6,11 +6,11 @@ fun main() {
     val ironOre: Int = 11
 
     // Процент баффа
-    val buffPercentage: Double = 0.20
+    val buffPercentage: Int = 20
 
     // Вычисляем бонусные материалы
-    val bonusCrystals: Int = (crystalOre * buffPercentage).toInt()
-    val bonusIron: Int = (ironOre * buffPercentage).toInt()
+    val bonusCrystals: Int = (crystalOre * buffPercentage / 100)
+    val bonusIron: Int = (ironOre * buffPercentage / 100)
 
     // Вывод результатов
     println("Бонусные кристаллы: $bonusCrystals")
