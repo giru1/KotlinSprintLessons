@@ -8,18 +8,21 @@ fun main() {
     // Время в пути в минутах
     val travelTimeMinutes: Int = 457
 
+    val minuteInHour: Int = 60
+    val hoursInDay: Int = 24
+
     // Общие минуты выезда
-    val totalDepartureMinutes: Int = departureHour * 60 + departureMinute
+    val totalDepartureMinutes: Int = departureHour * minuteInHour + departureMinute
 
     // Общие минуты прибытия
     val totalArrivalMinutes: Int = totalDepartureMinutes + travelTimeMinutes
 
     // Вычисляем часы и минуты прибытия
-    val arrivalHour: Int = totalArrivalMinutes / 60
-    val arrivalMinute: Int = totalArrivalMinutes % 60
+    val arrivalHour: Int = totalArrivalMinutes / minuteInHour
+    val arrivalMinute: Int = totalArrivalMinutes % minuteInHour
 
     // Приводим часы к 24-часовому формату
-    val formattedArrivalHour: Int = arrivalHour % 24
+    val formattedArrivalHour: Int = arrivalHour % hoursInDay
 
     // Вывод результата
     println("Время прибытия поезда: $formattedArrivalHour:${String.format("%02d", arrivalMinute)}")
