@@ -4,16 +4,17 @@ fun main() {
 
     val inputString = "D2-D4;0"
 
-    // Разделяем строку на части с помощью функция .split
-    val (move, moveNumber) = inputString.split(";")  // Разделяем по символу ';'
-    val (from, to) = move.split("-")  // Разделяем по символу '-'
+    val (move, moveNumber) = inputString.split(";")
+    val (from, to) = move.split("-")
 
-    // Присваиваем значения переменным
-    val fromPosition = from  // Откуда
-    val toPosition = to      // Куда
-    val numberOfMove = moveNumber // Номер хода
+    val splitResult = move.split("-", ";")
 
-    // Выводим результаты
+    println(splitResult)
+
+    val fromPosition = from
+    val toPosition = to
+    val numberOfMove = moveNumber
+
     println("Откуда: $fromPosition")
     println("Куда: $toPosition")
     println("Номер хода: $numberOfMove")
