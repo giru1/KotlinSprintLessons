@@ -9,7 +9,7 @@ fun main() {
 
     val splitResult = move.split("-", ";")
 
-    println(splitResult)
+    println("Тип переменной splitResult: ${splitResult::class.simpleName}")
 
     val fromPosition = from
     val toPosition = to
